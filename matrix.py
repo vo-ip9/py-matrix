@@ -85,7 +85,7 @@ class Matrix():
         """returns the element-wise product of the given matrixes"""
         if self.dimensions() == m2.dimensions():
             return Matrix(self.rows, self.cols, [i*j for i, j, in zip(self.mdata, m2.mdata)])
-        raise ValueError("Matrix dimensions must be equal to (symmetrically) multiply.")
+        raise ValueError("Matrix dimensions must be equal to multiply element-wise.")
 
 
     def get_index(self: object, row: int, col: int) -> int:
